@@ -1,0 +1,49 @@
+<section class="page-hero page-hero--stores">
+  <div class="container">
+    <span class="eyebrow">Store Locator</span>
+    <h1>Find a Half Fried Near You</h1>
+    <p>3 locations across Delhi. All serving the full menu.</p>
+  </div>
+</section>
+
+<section class="section stores-section">
+  <div class="container">
+    <div class="stores-grid">
+      {{#each stores}}
+      <div class="store-card">
+        <div class="store-card__header">
+          <span class="store-card__area">{{area}}</span>
+          <h2 class="store-card__name">{{name}}</h2>
+        </div>
+        <div class="store-card__body">
+          <div class="store-info">
+            <span class="store-info__icon">📍</span>
+            <div>
+              <p>{{address}}</p>
+              <p>{{city}}</p>
+            </div>
+          </div>
+          <div class="store-info">
+            <span class="store-info__icon">📞</span>
+            <a href="tel:{{phone}}">{{phone}}</a>
+          </div>
+          <div class="store-info">
+            <span class="store-info__icon">🕐</span>
+            <p>{{hours}}</p>
+          </div>
+        </div>
+        <div class="store-card__footer">
+          <a href="{{mapLink}}" target="_blank" rel="noopener" class="btn btn--primary btn--sm">
+            Get Directions →
+          </a>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+
+    <div class="franchise-note">
+      <h3>Want Half Fried in your city?</h3>
+      <p>We're expanding. If you're interested in bringing Half Fried to your neighbourhood, reach out to us on Instagram <a href="https://www.instagram.com/halffried.in/" target="_blank" rel="noopener">@halffried.in</a>.</p>
+    </div>
+  </div>
+</section>

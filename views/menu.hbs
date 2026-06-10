@@ -1,0 +1,44 @@
+<section class="page-hero page-hero--menu">
+  <div class="container">
+    <span class="eyebrow">The Full Spread</span>
+    <h1>Our Menu</h1>
+    <p>Everything priced for Delhi. Nothing made to compromise.</p>
+  </div>
+</section>
+
+<section class="section menu-section">
+  <div class="container">
+    <div class="cat-tabs">
+      {{#each categories}}
+      <a href="/menu?cat={{key}}" class="cat-tab {{#if active}}cat-tab--active{{/if}}">{{label}}</a>
+      {{/each}}
+    </div>
+
+    <div class="menu-grid">
+      {{#each items}}
+      <div class="menu-card" style="--item-color: {{color}}">
+        <div class="menu-card__visual">
+          <span class="menu-card__emoji">{{emoji}}</span>
+          <div class="menu-card__glow"></div>
+        </div>
+        {{#if tag}}
+        <span class="menu-card__tag menu-card__tag--{{tag}}">{{tagLabel tag}}</span>
+        {{/if}}
+        <div class="menu-card__body">
+          <h3 class="menu-card__name">{{name}}</h3>
+          <p class="menu-card__desc">{{desc}}</p>
+        </div>
+        <div class="menu-card__footer">
+          <span class="menu-card__price">₹{{price}}</span>
+          <span class="menu-card__serves">serves 1–2</span>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+
+    <div class="menu-note">
+      <p>🧾 Prices inclusive of all taxes. Menu & prices subject to change at store level.</p>
+      <p>Order via <a href="https://www.swiggy.com/city/delhi/half-fried-lado-sarai-rest736805" target="_blank" rel="noopener">Swiggy</a> or <a href="https://www.zomato.com/ncr/half-fried-lado-sarai-new-delhi" target="_blank" rel="noopener">Zomato</a> for delivery.</p>
+    </div>
+  </div>
+</section>
